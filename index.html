@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>3mSoftware-task</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    <div class="header">
+        <nav>
+            <div class="logo">
+                <img src="assets/logo.png" alt="Company logo" />
+            </div>
+            <div class="profile">
+                <!-- Notification Icon -->
+                <svg width="24" height="24" viewBox="0 0 24 24" class="notification-icon" fill="none" stroke="white"
+                    stroke-width="2">
+                    <path d="M6 19v-9a6 6 0 0 1 6-6 6 6 0 0 1 6 6v9H6" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M6 19H4m14 0h2m-9 3h2" />
+                    <circle cx="12" cy="3" r="1" />
+                </svg>
+                <div class="profile-container">
+                    <i class="fas fa-user" onclick="toggleProfileDetails()"></i>
+                    <div id="profile-details" class="profile-details">
+                        <div class="">
+                            <h3>Jay Giram</h3>
+                            <p>ID: 152-254-885</p>
+                            <p>Role: UI Developer</p>
+                        </div>
+                        <div class="contact-info">
+                            <h3>Contact Information</h3>
+                            <p>Email: joy@gmail.com</p>
+                            <p>Phone: +91 9637102111</p>
+                            <p>Location: Pune MH, IN</p>
+                        </div>
+                        <button id="profile" onclick="toggleProfileDetails()">Logout</button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div class="greeting_cont">
+        <div class="greeting">
+            <div class=" greeting_name"> Hi, Jay Giram
+                <span>👋</span>
+            </div>
+            <div class="subtext">
+                Here are the reports for you.
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        <div class="stats">
+            <div class="stat">
+                <h2>4500</h2>
+                <p>Total Customer Count</p>
+            </div>
+            <div class="stat">
+                <h2>1200</h2>
+                <p>Total Executed Projects</p>
+            </div>
+            <div class="stat">
+                <h2>130</h2>
+                <p>Total Team Size</p>
+            </div>
+            <div class="stat">
+                <h2>150</h2>
+                <p>Office Location</p>
+            </div>
+        </div>
+        <div class="charts">
+            <div class="chart">
+                <h3>Employees Status</h3>
+                <div class="chart-container">
+                    <canvas id="employeesStatusChart" width="200" height="200"></canvas>
+                    <div class="chart-center">
+                        <h2>130</h2>
+                        <p>Total Emp.</p>
+                    </div>
+                </div>
+                <div class="legend">
+                    <div class="item">
+                        <span class="blue"></span> Other: 40
+                    </div>
+                    <div class="item">
+                        <span class="orange"></span> Onboarding: 50
+                    </div>
+                    <div class="item">
+                        <span class="red"></span> Offboarding: 60
+                    </div>
+                </div>
+            </div>
+            <div class="chart">
+                <h3>Job Summary</h3>
+                <div class="chart-container">
+                    <canvas id="jobSummaryChart" width="200" height="200"></canvas>
+                    <div class="chart-center">
+                        <h2>60</h2>
+                        <p>Total jobs</p>
+                    </div>
+                </div>
+                <div class="legend">
+                    <div class="item">
+                        <span class="blue"></span> Closed: 5
+                    </div>
+                    <div class="item">
+                        <span class="orange"></span> Onboarding: 30
+                    </div>
+                    <div class="item">
+                        <span class="red"></span> Offboarding: 25
+                    </div>
+                </div>
+            </div>
+            <div class="chart">
+                <h3>Team Performance</h3>
+                <div class="chart-container">
+                    <canvas id="teamPerformanceChart" width="350" height="400"></canvas>
+                </div>
+                <div class="legend">
+                    <div class="item">
+                        <span class="blue"></span> Jan &nbsp;&nbsp;&nbsp;<span class=""></span> Feb
+                    </div>
+                    <div class="item">
+                        <span class="orange"></span> Mar &nbsp;&nbsp;&nbsp; <span class="red"></span> Apr:
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="table_container">
+        <h2>
+            Our Clients
+        </h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>
+                        Client Name
+                    </th>
+                    <th>
+                        Category
+                    </th>
+                    <th>
+                        Status
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="client-name">
+                        <img alt="Client avatar" height="40"
+                            src="https://storage.googleapis.com/a1aa/image/3A2xyUUamSbgDR0paDebuiRe9BReNg619SF2ZC1E5mJYHGeOB.jpg"
+                            width="40" />
+                        Tom screen
+                    </td>
+                    <td>
+                        Alpha Tech School
+                    </td>
+                    <td>
+                        <span class="status completed">
+                            Completed
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="client-name">
+                        <img alt="Client avatar" height="40"
+                            src="https://storage.googleapis.com/a1aa/image/3A2xyUUamSbgDR0paDebuiRe9BReNg619SF2ZC1E5mJYHGeOB.jpg"
+                            width="40" />
+                        Safety lab
+                    </td>
+                    <td>
+                        Tab Tracking mod
+                    </td>
+                    <td>
+                        <span class="status pending">
+                            Pending
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="client-name">
+                        <img alt="Client avatar" height="40"
+                            src="https://storage.googleapis.com/a1aa/image/3A2xyUUamSbgDR0paDebuiRe9BReNg619SF2ZC1E5mJYHGeOB.jpg"
+                            width="40" />
+                        Tom screen
+                    </td>
+                    <td>
+                        Alpha Tech School
+                    </td>
+                    <td>
+                        <span class="status cancelled">
+                            Cancelled
+                        </span>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+   
+   <script src="script.js"></script>
+</body>
+
+</html>
